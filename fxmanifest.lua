@@ -1,24 +1,36 @@
 fx_version 'cerulean'
-games { 'gta5' }
+lua54 'yes'
+game 'gta5'
 
-author 'Force#3883'
-description 'force_drugs bra dråg system för en bra server ;)'
+name 'force_drugs'
+author 'Force Developments <discord:@force3883>'
+description 'Drug pickup missions: collect crates guarded by hostile NPCs and bring them back for coke, meth or weed. ESX, QBCore and QBox.'
+version '2.0.0'
 
-client_scripts {
-    '@btrp_base/locale.lua',
-    'locale.lua',
-	'locale/sv.lua',
-
-
-    'config.lua',
-    'client/*'
+dependencies {
+    '/onesync',
+    'ox_lib',
 }
 
-server_scripts {	
-    '@btrp_base/locale.lua',
-    'locale.lua',
-	'locale/sv.lua',
-
+shared_scripts {
+    '@ox_lib/init.lua',
     'config.lua',
-	'server/*'
+    'shared/functions.lua',
+}
+
+server_scripts {
+    'version.lua',
+    'server/custom/frameworks/*.lua',
+    'server/custom/inventory.lua',
+    'server/main.lua',
+}
+
+client_scripts {
+    'client/custom/frameworks/*.lua',
+    'client/interact.lua',
+    'client/main.lua',
+}
+
+files {
+    'locales/*.json',
 }

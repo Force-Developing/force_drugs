@@ -1,79 +1,131 @@
 Config = {}
-Config.Locale = 'sv'
 
---Main
-Config.MainPos = vector3(1021.4396972656, -1733.1420898438, 35.606044769287 - 0.985)
-Config.PedHash = 'g_m_m_armgoon_01'
-Config.PedPos = vector3(1020.5805053711, -1733.3444824219, 35.606029510498 - 0.985)
-Config.PedPosHeading = 270.0
-Config.PedPosText = {x = 1020.5805053711, y = -1733.3444824219, z = 35.606029510498}
+-- Prints extra info to the F8 / server console. Setup errors are always printed.
+Config.Debug = false
 
---Plock
-Config.BlipRadiusPosCoke = vector3(1571.9096679688, 3585.0419921875, 35.362289428711)
-Config.BlipRadiusPosMeth = vector3(287.73645019531, 2860.5454101563, 43.642093658447)
-Config.BlipRadiusPosWeed = vector3(-3169.7907714844, 1101.0833740234, 20.756618499756)
-Config.pickUpPositions = 7
-Config.PickUpPos = {
-    --Coke
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke1', objectHash = 'prop_cs_cardbox_01', x = 1567.8587646484, y = 3577.2685546875, z = 33.140747070313 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke2', objectHash = 'prop_cs_rub_box_01', x = 1542.0288085938, y = 3575.8947753906, z = 35.437644958496 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke3', objectHash = 'prop_cardbordbox_03a', x = 1541.2824707031, y = 3596.4909667969, z = 35.452587127686 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke4', objectHash = 'prop_cardbordbox_04a', x = 1560.8637695313, y = 3596.7521972656, z = 38.775215148926 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke5', objectHash = 'prop_cardbordbox_04a', x = 1537.2199707031, y = 3594.3796386719, z = 38.766540527344 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke6', objectHash = 'prop_cardbordbox_03a', x = 1510.408203125, y = 3567.9865722656, z = 42.111904144287 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke7', objectHash = 'prop_cs_cardbox_01', x = 1569.5767822266, y = 3567.6518554688, z = 35.436622619629 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke8', objectHash = 'prop_cs_cardbox_01', x = 1608.5048828125, y = 3578.8127441406, z = 35.434799194336 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke9', objectHash = 'prop_cs_rub_box_01', x = 1589.2906494141, y = 3592.7590332031, z = 42.116718292236 - 0.985},
-    {typeOfDrug = 'coke', hasPickedUp = false, hasSpawned = false, objectName = 'coke10', objectHash = 'prop_cs_cardbox_01', x = 1599.0810546875, y = 3569.1469726563, z = 35.403930664063 - 0.985},
-    --Meth
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth1', objectHash = 'prop_cs_cardbox_01', x = 265.02655029297, y = 2871.1860351563, z = 43.610485076904 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth2', objectHash = 'prop_cs_rub_box_01', x = 287.6669921875, y = 2823.3898925781, z = 44.975578308105 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth3', objectHash = 'prop_cardbordbox_03a', x = 255.29621887207, y = 2875.2995605469, z = 43.599945068359 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth4', objectHash = 'prop_cardbordbox_04a', x = 286.43026733398, y = 2841.2229003906, z = 43.642417907715 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth5', objectHash = 'prop_cardbordbox_04a', x = 271.94079589844, y = 2859.0129394531, z = 43.642211914063 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth6', objectHash = 'prop_cardbordbox_04a', x = 272.03265380859, y = 2865.7731933594, z = 74.174392700195 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth7', objectHash = 'prop_cardbordbox_03a', x = 311.00909423828, y = 2861.1831054688, z = 43.538791656494 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth8', objectHash = 'prop_cardbordbox_03a', x = 322.3307800293, y = 2877.8771972656, z = 43.445365905762 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth9', objectHash = 'prop_cs_rub_box_01', x = 318.8102722168, y = 2884.0690917969, z = 46.382827758789 - 0.985},
-    {typeOfDrug = 'meth', hasPickedUp = false, hasSpawned = false, objectName = 'meth10', objectHash = 'prop_cs_cardbox_01', x = 314.09600830078, y = 2887.0534667969, z = 49.573440551758 - 0.985},
-    --Weed
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed1', objectHash = 'prop_cs_cardbox_01', x = -3167.8618164063, y = 1098.4462890625, z = 20.85270690918 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed2', objectHash = 'prop_cs_rub_box_01', x = -3163.0905761719, y = 1112.5025634766, z = 20.813638687134 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed3', objectHash = 'prop_cardbordbox_03a', x = -3181.2102050781, y = 1074.4079589844, z = 25.48412322998 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed4', objectHash = 'prop_cardbordbox_04a', x = -3182.5791015625, y = 1110.5400390625, z = 21.066827774048 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed5', objectHash = 'prop_cardbordbox_04a', x = -3155.1118164063, y = 1104.1694335938, z = 20.869386672974 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed6', objectHash = 'prop_cardbordbox_03a', x = -3147.8669433594, y = 1119.2424316406, z = 20.863443374634 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed7', objectHash = 'prop_cs_rub_box_01', x = -3158.759765625, y = 1091.6695556641, z = 20.852903366089 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed8', objectHash = 'prop_cardbordbox_03a', x = -3162.4187011719, y = 1125.9613037109, z = 20.900230407715 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed9', objectHash = 'prop_cardbordbox_03a', x = -3163.7019042969, y = 1102.2844238281, z = 24.364671707153 - 0.985},
-    {typeOfDrug = 'weed', hasPickedUp = false, hasSpawned = false, objectName = 'weed10', objectHash = 'prop_cs_cardbox_01', x = -3190.3977050781, y = 1085.6697998047, z = 20.876058578491 - 0.985},
+-- "en", "sv" or "auto" (follows the replicated ox:locale convar: setr ox:locale "sv")
+Config.Locale = "en"
+
+-- "auto" (detected by the server: qbx_core, es_extended, qb-core), "esx", "qb", "qbx" or "custom"
+Config.Framework = "auto"
+
+-- "auto" (ox_target, then qb-target, else [E] + text UI), "ox_target", "qb-target" or "none" ([E] + text UI)
+Config.Target = "auto"
+
+-- The man who hands out the jobs and takes the crates back
+Config.Boss = {
+    name = "Kalle",                         -- shown in the menu, the prompt and the map blip
+    model = "g_m_m_armgoon_01",
+    coords = vec4(1020.58, -1733.34, 34.62, 270.0),
+    anim = { dict = "mini@strip_club@idles@bouncer@base", clip = "base" }, -- false for none
+    blip = false,                           -- { sprite = 51, colour = 1, scale = 0.7 } to show him on the map
 }
 
-Config.PedPosistions = {
-    --Coke
-    {typeOfDrug = 'coke', hasSpawned = false, pedName = 'cokePed1', pedWeapon = 'WEAPON_BAT', pedHash = 'a_m_y_methhead_01', x = 1536.1107177734, y = 3593.4846191406, z = 38.766532897949, h = 210.0},
-    {typeOfDrug = 'coke', hasSpawned = false, pedName = 'cokePed2', pedWeapon = 'WEAPON_KNUCKLE', pedHash = 'a_m_y_mexthug_01', x = 1572.3724365234, y = 3571.1901855469, z = 35.435195922852, h = 40.0},
-    {typeOfDrug = 'coke', hasSpawned = false, pedName = 'cokePed3', pedWeapon = 'WEAPON_KNIFE', pedHash = 'u_m_m_edtoh', x = 1599.8454589844, y = 3590.2890625, z = 38.766536712646, h = 120.0},
-    --Meth
-    {typeOfDrug = 'meth', hasSpawned = false, pedName = 'methPed1', pedWeapon = 'WEAPON_KNIFE', pedHash = 'a_m_y_mexthug_01', x = 296.17657470703, y = 2879.4677734375, z = 43.610584259033, h = 210.0},
-    {typeOfDrug = 'meth', hasSpawned = false, pedName = 'methPed2', pedWeapon = 'WEAPON_KNUCKLE', pedHash = 'u_m_m_edtoh', x = 287.09799194336, y = 2843.892578125, z = 44.70414352417, h = 30.0},
-    {typeOfDrug = 'meth', hasSpawned = false, pedName = 'methPed3', pedWeapon = 'WEAPON_BAT', pedHash = 'a_m_y_methhead_01', x = 314.84057617188, y = 2862.525390625, z = 43.521789550781, h = 50.0},
-    --Weed
-    {typeOfDrug = 'weed', hasSpawned = false, pedName = 'weedPed1', pedWeapon = 'WEAPON_KNUCKLE', pedHash = 'a_m_y_mexthug_01', x = -3166.5251464844, y = 1102.77734375, z = 20.817186355591, h = 323.0},
-    {typeOfDrug = 'weed', hasSpawned = false, pedName = 'weedPed2', pedWeapon = 'WEAPON_BAT', pedHash = 'u_m_m_edtoh', x = -3164.4130859375, y = 1111.6390380859, z = 20.791635513306, h = 181.0},
-    {typeOfDrug = 'weed', hasSpawned = false, pedName = 'weedPed3', pedWeapon = 'WEAPON_KNIFE', pedHash = 'a_m_y_methhead_01', x = -3154.740234375, y = 1099.8819580078, z = 20.853605270386, h = 250.0},
+-- How close (meters) the player has to stand to the boss and to a crate. The server allows a small margin on top.
+Config.InteractDistance = 2.0
+
+-- Police needed online to start a job. 0 = no requirement.
+Config.Police = {
+    jobs = { "police", "sheriff" },
+    minimum = 0,
+    onlyOnDuty = true, -- QBCore / QBox duty, ESX job.onDuty where your ESX version has it
 }
 
---Timer
-Config.missionTimerCoke = 1000
-Config.missionTimerMeth = 1250
-Config.missionTimerWeed = 750
-Config.DisplayTimer = true
+-- Seconds it takes to pick up one crate
+Config.PickupDuration = 10
 
--- Föremål
-Config.CokeItem = 'coke'
-Config.MethItem = 'meth'
-Config.WeedItem = 'weed'
-Config.RandomAmountCoke = 10
-Config.RandomAmountMeth = 15
-Config.RandomAmountWeed = 25
+-- Draw the time left and the crate count at the top of the screen during a job
+Config.ShowTimer = true
+
+--[[
+  The jobs. The key is the job id; the menu lists them by key.
+  label         = menu label
+  item          = item given as the reward (must exist in your inventory, see the items folder)
+  amount        = { min, max } items given when the crates are delivered
+  timeLimit     = seconds to collect the crates and get back to the boss
+  cooldown      = seconds before the same player can take this job again (after a delivery, a failure or death)
+  cratesNeeded  = crates to collect (out of all crates listed)
+  area          = { coords, radius } shown on the map; crates and guards appear when the player gets close
+  crates        = { model, coords } where the crates stand
+  guards        = hostile NPCs around the crates: { model, weapon, coords = vec4 }
+]]
+Config.Missions = {
+    coke = {
+        label = "Cocaine",
+        item = "coke",
+        amount = { min = 5, max = 10 },
+        timeLimit = 1000,
+        cooldown = 480,
+        cratesNeeded = 7,
+        area = { coords = vec3(1571.91, 3585.04, 35.36), radius = 50.0 },
+        crates = {
+            { model = "prop_cs_cardbox_01", coords = vec3(1567.86, 3577.27, 32.16) },
+            { model = "prop_cs_rub_box_01", coords = vec3(1542.03, 3575.89, 34.45) },
+            { model = "prop_cardbordbox_03a", coords = vec3(1541.28, 3596.49, 34.47) },
+            { model = "prop_cardbordbox_04a", coords = vec3(1560.86, 3596.75, 37.79) },
+            { model = "prop_cardbordbox_04a", coords = vec3(1537.22, 3594.38, 37.78) },
+            { model = "prop_cardbordbox_03a", coords = vec3(1510.41, 3567.99, 41.13) },
+            { model = "prop_cs_cardbox_01", coords = vec3(1569.58, 3567.65, 34.45) },
+            { model = "prop_cs_cardbox_01", coords = vec3(1608.50, 3578.81, 34.45) },
+            { model = "prop_cs_rub_box_01", coords = vec3(1589.29, 3592.76, 41.13) },
+            { model = "prop_cs_cardbox_01", coords = vec3(1599.08, 3569.15, 34.42) },
+        },
+        guards = {
+            { model = "a_m_y_methhead_01", weapon = "WEAPON_BAT", coords = vec4(1536.11, 3593.48, 38.77, 210.0) },
+            { model = "a_m_y_mexthug_01", weapon = "WEAPON_KNUCKLE", coords = vec4(1572.37, 3571.19, 35.44, 40.0) },
+            { model = "u_m_m_edtoh", weapon = "WEAPON_KNIFE", coords = vec4(1599.85, 3590.29, 38.77, 120.0) },
+        },
+    },
+    meth = {
+        label = "Meth",
+        item = "meth",
+        amount = { min = 5, max = 15 },
+        timeLimit = 1250,
+        cooldown = 480,
+        cratesNeeded = 7,
+        area = { coords = vec3(287.74, 2860.55, 43.64), radius = 50.0 },
+        crates = {
+            { model = "prop_cs_cardbox_01", coords = vec3(265.03, 2871.19, 42.63) },
+            { model = "prop_cs_rub_box_01", coords = vec3(287.67, 2823.39, 43.99) },
+            { model = "prop_cardbordbox_03a", coords = vec3(255.30, 2875.30, 42.61) },
+            { model = "prop_cardbordbox_04a", coords = vec3(286.43, 2841.22, 42.66) },
+            { model = "prop_cardbordbox_04a", coords = vec3(271.94, 2859.01, 42.66) },
+            { model = "prop_cardbordbox_04a", coords = vec3(272.03, 2865.77, 73.19) },
+            { model = "prop_cardbordbox_03a", coords = vec3(311.01, 2861.18, 42.55) },
+            { model = "prop_cardbordbox_03a", coords = vec3(322.33, 2877.88, 42.46) },
+            { model = "prop_cs_rub_box_01", coords = vec3(318.81, 2884.07, 45.40) },
+            { model = "prop_cs_cardbox_01", coords = vec3(314.10, 2887.05, 48.59) },
+        },
+        guards = {
+            { model = "a_m_y_mexthug_01", weapon = "WEAPON_KNIFE", coords = vec4(296.18, 2879.47, 43.61, 210.0) },
+            { model = "u_m_m_edtoh", weapon = "WEAPON_KNUCKLE", coords = vec4(287.10, 2843.89, 44.70, 30.0) },
+            { model = "a_m_y_methhead_01", weapon = "WEAPON_BAT", coords = vec4(314.84, 2862.53, 43.52, 50.0) },
+        },
+    },
+    weed = {
+        label = "Weed",
+        item = "weed",
+        amount = { min = 5, max = 25 },
+        timeLimit = 750,
+        cooldown = 480,
+        cratesNeeded = 7,
+        area = { coords = vec3(-3169.79, 1101.08, 20.76), radius = 50.0 },
+        crates = {
+            { model = "prop_cs_cardbox_01", coords = vec3(-3167.86, 1098.45, 19.87) },
+            { model = "prop_cs_rub_box_01", coords = vec3(-3163.09, 1112.50, 19.83) },
+            { model = "prop_cardbordbox_03a", coords = vec3(-3181.21, 1074.41, 24.50) },
+            { model = "prop_cardbordbox_04a", coords = vec3(-3182.58, 1110.54, 20.08) },
+            { model = "prop_cardbordbox_04a", coords = vec3(-3155.11, 1104.17, 19.88) },
+            { model = "prop_cardbordbox_03a", coords = vec3(-3147.87, 1119.24, 19.88) },
+            { model = "prop_cs_rub_box_01", coords = vec3(-3158.76, 1091.67, 19.87) },
+            { model = "prop_cardbordbox_03a", coords = vec3(-3162.42, 1125.96, 19.92) },
+            { model = "prop_cardbordbox_03a", coords = vec3(-3163.70, 1102.28, 23.38) },
+            { model = "prop_cs_cardbox_01", coords = vec3(-3190.40, 1085.67, 19.89) },
+        },
+        guards = {
+            { model = "a_m_y_mexthug_01", weapon = "WEAPON_KNUCKLE", coords = vec4(-3166.53, 1102.78, 20.82, 323.0) },
+            { model = "u_m_m_edtoh", weapon = "WEAPON_BAT", coords = vec4(-3164.41, 1111.64, 20.79, 181.0) },
+            { model = "a_m_y_methhead_01", weapon = "WEAPON_KNIFE", coords = vec4(-3154.74, 1099.88, 20.85, 250.0) },
+        },
+    },
+}
