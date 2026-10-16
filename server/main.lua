@@ -154,6 +154,11 @@ lib.callback.register(RESOURCE .. ":server:finish", function(source)
     endMission(source, "job no longer configured")
     return false, "failed"
   end
+  -- The character changed (logout / multichar) since the job started: the job belonged to the old one
+  if identifierOf(source) ~= running.identifier then
+    endMission(source, "character changed")
+    return false, "no_job"
+  end
   if running.count < mission.cratesNeeded then return false, "not_done" end
   if not Config.Boss or not isNear(source, Config.Boss.position, GetInteractDistance()) then return false, "too_far" end
 
