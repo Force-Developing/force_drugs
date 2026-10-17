@@ -148,6 +148,8 @@ end)
 lib.callback.register(RESOURCE .. ":server:finish", function(source)
   local running = missions[source]
   if not running then return false, "no_job" end
+  -- A delivery is already being paid (the inventory export may yield): never pay twice
+  if running.finishing then return false, "busy" end
   if expire(source) then return false, "expired" end
   local mission = GetMission(running.id)
   if not mission then
@@ -163,9 +165,14 @@ lib.callback.register(RESOURCE .. ":server:finish", function(source)
   if not Config.Boss or not isNear(source, Config.Boss.position, GetInteractDistance()) then return false, "too_far" end
 
   local amount = math.random(mission.amount.min, mission.amount.max)
+  running.finishing = true
   -- The job stays open on a full inventory: the player makes room and talks to the boss again
-  if not CanCarryItem(source, mission.item, amount) then return false, "inventory_full" end
-  if not AddItem(source, mission.item, amount) then return false, "inventory_full" end
+  local okPay, added = pcall(function()
+    return CanCarryItem(source, mission.item, amount) and AddItem(source, mission.item, amount)
+  end)
+  running.finishing = nil
+  if not okPay then Log("error", ("Paying the reward failed: %s"):format(tostring(added))) end
+  if not okPay or not added then return false, "inventory_full" end
 
   endMission(source, "delivered")
   Debug("info", "%s got %sx %s from job '%s'", tostring(GetPlayerName(source)), amount, mission.item, mission.id)
